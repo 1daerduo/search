@@ -1,0 +1,331 @@
+ [2022-12-03 12:07:14.061]  [2022-12-03 12:07:14.061]
+ [2022-12-03 12:07:14.197]  zx_log_callback:4872] LOG_TYPE[0]:WifiCom22-12-03 12:07:13.845 [INFO][xm_interface.c:zx_wifi_heartbeat:4608] exit......
+ [2022-12-03 12:07:14.232]  [93136.676000] SYNC - BBP R4 to 20MHz.l
+ [2022-12-03 12:07:14.536]  [93136.980000] SYNC - BBP R4 to 20MHz.l
+ [2022-12-03 12:07:14.838]  [93137.284000] SYNC - BBP R4 to 20MHz.l
+ [2022-12-03 12:07:14.863]  2022-12-03 12:07:14.505 [INFO][xm_interface.c:zx_log_callback:4872] LOG_TYPE[0]:clear data...
+ [2022-12-03 12:07:14.864]  2022-12-03 12:07:14.506 [INFO][xm_interface.c:zx_log_callback:4872] LOG_TYPE[0]:remove lock...
+ [2022-12-03 12:07:14.883]  2022-12-03 12:07:14.506 [INFO][xm_interface.c:zx_log_callback:4872] LOG_TYPE[0]:Destroy success...
+ [2022-12-03 12:07:15.398]  2022-12-03 12:07:15.038 [WARN][xm_interface.c:eufy_log_callback:4896] EufySdk_Deini
+ [2022-12-03 12:07:15.511]  2022-12-03 12:07:15.150 [INFO][xm_interface.c:eufy_log_callback:4892] mainTime exit
+ [2022-12-03 12:07:15.511]  2022-12-03 12:07:15.157 [ERROR][xm_interface.c:eufy_log_callback:4899] mainServer exit
+ [2022-12-03 12:07:15.641]  [93138.080000] SYNC - BBP R4 to 20MHz.l
+ [2022-12-03 12:07:15.948]  [93138.384000] [PMF]ap_pmf_init:: apidx=0, MFPC=0, MFPR=0, SHA256=0
+ [2022-12-03 12:07:15.949]  [93138.388000] [PMF]RTMPMakeRsnIeCap: RSNIE Capability MFPC=0, MFPR=0
+ [2022-12-03 12:07:15.949]  [93138.396000] [PMF]ap_pmf_init:: apidx=1, MFPC=0, MFPR=0, SHA256=0
+ [2022-12-03 12:07:15.968]  [93138.400000] [PMF]RTMPMakeRsnIeCap: RSNIE Capability MFPC=0, MFPR=0
+ [2022-12-03 12:07:15.968]  [93138.408000] MtAsicSetRalinkBurstMode(3050): Not support for HIF_MT yet!
+ [2022-12-03 12:07:15.968]  [93138.412000] MtAsicSetPiggyBack(795): Not support for HIF_MT yet!
+ [2022-12-03 12:07:15.998]  [93138.436000] reload DPD from flash , 0x9F = [c600] doReload bit7[0]
+ [2022-12-03 12:07:16.017]  [93138.444000] CmdLoadDPDDataFromFlash: Channel = 1, DoReload = 0
+ [2022-12-03 12:07:16.017]  [93138.448000] MtAsicSetTxPreamble(3029): Not support for HIF_MT yet!
+ [2022-12-03 12:07:16.017]  [93138.460000] MtAsicAddSharedKeyEntry(1342): Not support for HIF_MT yet!
+ [2022-12-03 12:07:16.019]  [93138.472000] MtAsicAddSharedKeyEntry(1342): Not support for HIF_MT yet!
+ [2022-12-03 12:07:16.026]  [93138.476000] The 4-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 4
+ [2022-12-03 12:07:16.052]  [93138.484000] MtAsicSetPreTbtt(): bss_idx=0, PreTBTT timeout = 0xf0
+ [2022-12-03 12:07:16.052]  [93138.492000] Main bssid = 8c:85:80:ee:58:b1
+ [2022-12-03 12:07:16.053]  [93138.496000] <==== rt28xx_init, Status=0
+ [2022-12-03 12:07:16.053]  [93138.500000] @@@ ed_monitor_exit : ===>
+ [2022-12-03 12:07:16.053]  [93138.504000] @@@ ed_monitor_exit : <===
+ [2022-12-03 12:07:16.057]  [93138.508000] mt7628_set_ed_cca: TURN OFF EDCCA  mac 0x10618 = 0xd7083f0f, EDCCA_Status=0
+ [2022-12-03 12:07:16.061]  [93138.516000] WiFi Startup Cost (ra0): 7.700s
+ [2022-12-03 12:07:16.097]  [93138.524000] br0: port 1(ra0) entered forwarding state
+ [2022-12-03 12:07:16.097]  [93138.528000] br0: port 1(ra0) entered forwarding state
+ [2022-12-03 12:07:16.214]  2022-12-03 12:07:15.853 [INFO][xm_interface.c:zx_deinit_camera_sdk:5495] exit...[93138.660000] Set_ed_chk_proc()::ed_chk=0
+ [2022-12-03 12:07:16.214]  
+ [2022-12-03 12:07:16.239]  2022-12-03 12:[93138.664000] mt7628_set_ed_cca: TURN OFF EDCCA  mac 0x10618 = 0xd7083f0f, EDCCA_Status=0
+ [2022-12-03 12:07:16.239]  07:15.854 [INFO][circular_buffer.c:destroy_queue:130] exit......
+ [2022-12-03 12:07:16.240]  2022-12-03 12:07:15.854 [INFO][circular_buffer.c:destroy_queue:130] exit......
+ [2022-12-03 12:07:16.240]  2022-12-03 12:07:15.855 [INFO][circular_buffer[93138.692000] cfg_mode=6
+ [2022-12-03 12:07:16.241]  .c:destroy_queue[93138.696000] wmode_band_equal(): Band Equal!
+ [2022-12-03 12:07:16.269]  :130] exit......[93138.700000] CountryCode(2.4G/5G)=0/7, RFIC=23, PHY mode=8, support 11 channels
+ [2022-12-03 12:07:16.269]  
+ [2022-12-03 12:07:16.269]  2022-12-03 12:[93138.708000] AddTxSType: already registered TxSType (PID = 32, Format = 0
+ [2022-12-03 12:07:16.270]  07:15.855 [INFO][circular_buffer.c:destroy_queue:130] exit......
+ [2022-12-03 12:07:16.271]  2022-12-03 12:07:15.856 [INFO][circular_buffer.c:destroy_queue:130] exit......
+ [2022-12-03 12:07:16.302]  2022-12-03 12:07:15.856 [INFO][circular_buffer.c:destroy_queue:130] exit......
+ [2022-12-03 12:07:16.303]  2022-12-03 12:07:15.857 [INFO][circular_buffer.c:destroy_queue:130] exit......
+ [2022-12-03 12:07:16.303]  2022-12-03 12:07:15.857 [INFO][circular_buffer.c:destroy_queue:130] exit......
+ [2022-12-03 12:07:16.303]  2022-12-03 12:07:15.874 [INFO][circular_buffer.c:destroy_queue:130] exit......
+ [2022-12-03 12:07:16.306]  2022-12-03 12:07:15.875 [INFO][circular_buffer.c:destroy_queue:130] exit......
+ [2022-12-03 12:07:16.467]  [93138.916000] ==>SetSCSEnable_Proc (ON)
+ [2022-12-03 12:07:16.501]  [93138.932000] Set_ed_chk_proc()::ed_chk=0
+ [2022-12-03 12:07:16.501]  [93138.936000] mt7628_set_ed_cca: TURN OFF EDCCA  mac 0x10618 = 0xd7083f0f, EDCCA_Status=0
+ [2022-12-03 12:07:16.624]  [93139.068000] ==>SetSCSEnable_Proc (ON)
+ [2022-12-03 12:07:16.624]  [93139.076000] cfg_mode=6
+ [2022-12-03 12:07:16.626]  [93139.080000] wmode_band_equal(): Band Equal!
+ [2022-12-03 12:07:16.653]  [93139.084000] CountryCode(2.4G/5G)=0/7, RFIC=23, PHY mode=8, support 11 channels
+ [2022-12-03 12:07:16.653]  [93139.092000] AddTxSType: already registered TxSType (PID = 32, Format = 0
+ [2022-12-03 12:07:16.682]  2022-12-03 12:07:15.875 [INFO][local_storage_interface.c:zx_deinit_local_storage:6810] enter...
+ [2022-12-03 12:07:16.683]  2022-12-03 12:07:16.327 [INFO][local_storage_interface.c:zx_deinit_local_storage:6842] exit...
+ [2022-12-03 12:07:16.686]  2022-12-03 12:07:16.328 [INFO][ai_interface.c:zx_deinit_ai_model:2955] zx_deinit_ai_model enter
+ [2022-12-03 12:07:16.719]  2022-12-03 12:07:16.328 [INFO][ai_interface.c:zx_deinit_ai_model:2970] zx_deinit_ai_model exit
+ [2022-12-03 12:07:16.720]  2022-12-03 12:07:16.328 [INFO][sub1g_interface.c:zx_deinit_sub1g:4866] enter......
+ [2022-12-03 12:07:16.720]  2022-12-03 12:07:16.353 [INFO][security_main.c:zx_exit_process:5630] exit......
+ [2022-12-03 12:07:16.720]  # 1 not found
+ [2022-12-03 12:07:16.750]  Dec  3 12:07:16 mDNSResponder: mDNSPlatformSendUDP got error 126 (Cannot assign requested address) sending packet to FF02:0000:0000:0000:0000:0000:0000:00FB on interface FE80:0000:0000:0000:8E85:80FF:FEEE:58B1/ra0/2
+ [2022-12-03 12:07:16.782]  Dec  3 12:07:16 mDNSResponder: mDNSPlatformSendUDP got error 126 (Cannot assign requested address) sending packet to FF02:0000:0000:0000:0000:0000:0000:00FB on interface FE80:0000:0000:0000:8E85:80FF:FEEE:58B1/ra0/2
+ [2022-12-03 12:07:16.877]  Dec  3 12:07:16 mDNSResponder: mDNSPlatformSendUDP got error 126 (Cannot assign requested address) sending packet to FF02:0000:0000:0000:0000:0000:0000:00FB on interface FE80:0000:0000:0000:8E85:80FF:FEEE:58B1/ra0/2
+ [2022-12-03 12:07:17.091]  [93139.528000] br0: port 1(ra0) entered forwarding state
+ [2022-12-03 12:07:18.361]  Dec  3 12:07:17 mDNSResponder: mDNS_Execute: SendResponses didn't send all its responses; will try again in one second
+ [2022-12-03 12:07:19.357]  Dec  3 12:07:18 mDNSResponder: mDNS_Execute: SendResponses didn't send all its responses; will try again in one second
+ [2022-12-03 12:07:20.379]  Dec  3 12:07:19 mDNSResponder: mDNS_Execute: SendResponses didn't send all its responses; will try again in one second
+ [2022-12-03 12:07:34.304]  [93156.736000] ####Set_SignalUserPid_Proc,5897
+ [2022-12-03 12:07:35.264]  [93157.704000] killall: udhcpc: no process killed
+ [2022-12-03 12:07:35.433]  [93157.716000] udhcpc (v1.12.1) started
+ [2022-12-03 12:07:37.257]  [93159.688000] Sending select for 192.168.254.181...
+ [2022-12-03 12:07:37.257]  [93159.696000] Lease of 192.168.254.181 obtained, lease time 3600
+ [2022-12-03 12:07:37.500]  [93159.940000] killall: zeroconf: no process killed
+ [2022-12-03 12:07:37.535]  [93159.972000] /sbin/udhcpc.sh: line 112: /bin: Permission denied
+ [2022-12-03 12:07:37.544]  [93160.000000] deleting routers
+ [2022-12-03 12:07:37.568]  [93160.008000] route: ioctl 0x890c failed: No such process
+ [2022-12-03 12:07:37.601]  [93160.040000] adding dns 192.168.254.1
+ [2022-12-03 12:07:37.634]  [93160.072000] killall: goahead: no process killed
+ [2022-12-03 12:07:37.667]  sh: /etc_ro/lighttpd/www/cgi-bin/firewall.cgi: not found
+ [2022-12-03 12:07:37.673]  sh: /etc_ro/lighttpd/www/cgi-bin/internet.cgi: not found
+ [2022-12-03 12:07:38.435]  [93160.880000] /sbin/config-igmpproxy.sh: line 10: igmpproxy.sh: not found
+ [2022-12-03 12:07:38.485]  /sbin/config-igmpproxy.sh: line 10: igmpproxy.sh: not found
+ [2022-12-03 12:07:38.746]  [93161.104000] /sbin/config-igmpproxy.sh: line 12: igmpproxy: not found
+ [2022-12-03 12:07:38.771]  /sbin/config-igmpproxy.sh: line 12: igmpproxy: not found
+ [2022-12-03 12:07:38.803]  sh: /etc_ro/lighttpd/www/cgi-bin/qos.cgi: not found
+ [2022-12-03 12:07:38.803]  sh: /etc_ro/lighttpd/www/cgi-bin/internet.cgi: not found
+ [2022-12-03 12:07:40.477]  [93162.896000] ALSA sound/usb/pcm.c:349 setting usb interface 1:1
+ [2022-12-03 12:08:18.020]  [93200.468000] ALSA sound/usb/pcm.c:349 setting usb interface 1:1
+ [2022-12-03 12:08:19.633]  [93202.068000] AddTxSType: already registered TxSType (PID = 32, Format = 0
+ [2022-12-03 12:08:19.634]  [93202.076000] The 4-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 4
+ [2022-12-03 12:08:19.634]  [93202.084000] ##### mbss_cr_enable, BssId = 1
+ [2022-12-03 12:08:19.636]  [93202.088000] br0: port 2(ra1) entered forwarding state
+ [2022-12-03 12:08:19.641]  [93202.092000] br0: port 2(ra1) entered forwarding state
+ [2022-12-03 12:08:19.774]  [93202.200000] flush result = ffffff
+ [2022-12-03 12:08:19.774]  [93202.204000] check pse fid Q7:pkt:0, fid:287, dw_idx = 0, dw_content = 0x38000101
+ [2022-12-03 12:08:19.774]  [93202.212000] pkt:0, fid:287, dw_idx = 1, dw_content = 0x8cc00
+ [2022-12-03 12:08:19.774]  [93202.216000] pkt:0, fid:287, dw_idx = 2, dw_content = 0xa0000408
+ [2022-12-03 12:08:19.774]  [93202.224000] pkt:0, fid:287, dw_idx = 3, dw_content = 0xc26ef840
+ [2022-12-03 12:08:19.777]  [93202.228000] pkt:0, fid:287, dw_idx = 4, dw_content = 0x26e
+ [2022-12-03 12:08:19.811]  [93202.236000] pkt:0, fid:287, dw_idx = 5, dw_content = 0x1420
+ [2022-12-03 12:08:19.811]  [93202.240000] pkt:0, fid:287, dw_idx = 6, dw_content = 0xc00
+ [2022-12-03 12:08:19.838]  [93202.248000] pkt:0, fid:287, dw_idx = 7, dw_content = 0x0
+ [2022-12-03 12:08:19.838]  [93202.260000] ALSA sound/usb/pcm.c:349 setting usb interface 1:1
+ [2022-12-03 12:08:20.666]  [93203.092000] br0: port 2(ra1) entered forwarding state
+ [2022-12-03 12:08:27.006]  [93209.432000] [yuxw ] 8e:85:80:fe:58:b1 client MAC: 04:17:b6:27:18:9a 
+ [2022-12-03 12:08:27.006]  [93209.436000] 04:17:b6:27:18:9a in
+ [2022-12-03 12:08:27.007]  [93209.440000] 04:17:b6:27:18:9a=================================> pRxBlk->wcid: 255
+ [2022-12-03 12:08:27.007]  [93209.448000] 
+ [2022-12-03 12:08:27.007]  [93209.448000] ***   get one auth request.
+ [2022-12-03 12:08:27.007]  [93209.448000] 
+ [2022-12-03 12:08:27.038]  [93209.476000] kill_sig_client_associate_begin,1184
+ [2022-12-03 12:08:27.069]  [93209.512000] ALSA sound/usb/pcm.c:349 setting usb interface 1:1
+ [2022-12-03 12:08:27.130]  [93209.572000] PeerAssocReqSanity - IE_HT_CAP
+ [2022-12-03 12:08:27.833]  [93210.264000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:08:28.185]  [93210.620000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:08:28.186]  [93210.628000] AP SETKEYS DONE - WPA2, AuthMode(7)=WPA2PSK, WepStatus(6)=AES, GroupWepStatus(6)=AES
+ [2022-12-03 12:08:28.186]  [93210.628000] 
+ [2022-12-03 12:08:28.186]  [93210.636000] kill_sig_client_associate_success,1213
+ [2022-12-03 12:08:31.418]  [93213.848000] [yuxw ] 8e:85:80:fe:58:b1 client MAC: 04:17:b6:63:fc:5b 
+ [2022-12-03 12:08:31.418]  [93213.852000] 04:17:b6:63:fc:5b in
+ [2022-12-03 12:08:31.420]  [93213.856000] 04:17:b6:63:fc:5b=================================> pRxBlk->wcid: 255
+ [2022-12-03 12:08:31.420]  [93213.864000] 
+ [2022-12-03 12:08:31.420]  [93213.864000] ***   get one auth request.
+ [2022-12-03 12:08:31.420]  [93213.864000] 
+ [2022-12-03 12:08:31.422]  [93213.872000] kill_sig_client_associate_begin,1184
+ [2022-12-03 12:08:31.456]  [93213.880000] PeerAssocReqSanity - IE_HT_CAP
+ [2022-12-03 12:08:31.565]  [93213.992000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:08:31.607]  [93214.036000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:08:31.608]  [93214.040000] AP SETKEYS DONE - WPA2, AuthMode(7)=WPA2PSK, WepStatus(6)=AES, GroupWepStatus(6)=AES
+ [2022-12-03 12:08:31.608]  [93214.040000] 
+ [2022-12-03 12:08:31.608]  [93214.052000] kill_sig_client_associate_success,1213
+ [2022-12-03 12:08:32.115]  [93214.544000] Rcv Wcid(2) AddBAReq
+ [2022-12-03 12:08:32.116]  [93214.548000] Start Seq = 00000004
+ [2022-12-03 12:08:32.116]  [93214.568000] Rcv Wcid(2) AddBAReq
+ [2022-12-03 12:08:32.118]  [93214.572000] Start Seq = 00000001
+ [2022-12-03 12:08:36.972]  [93219.416000] da match,0x8e8580fe58b1
+ [2022-12-03 12:08:39.847]  [93222.280000] [yuxw ] 8c:85:80:ee:58:b1 client MAC: 04:17:b6:63:fc:5b 
+ [2022-12-03 12:08:39.847]  [93222.288000] 04:17:b6:63:fc:5b in
+ [2022-12-03 12:08:39.848]  [93222.288000] 04:17:b6:63:fc:5b=================================> pRxBlk->wcid: 255
+ [2022-12-03 12:08:39.848]  [93222.296000] 
+ [2022-12-03 12:08:39.848]  [93222.296000] ***   get one auth request.
+ [2022-12-03 12:08:39.873]  [93222.296000] 
+ [2022-12-03 12:08:39.874]  [93222.304000] kill_sig_client_associate_begin,1184
+ [2022-12-03 12:08:39.905]  [93222.340000] PeerAssocReqSanity - IE_HT_CAP
+ [2022-12-03 12:08:40.027]  [93222.480000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:08:40.057]  [93222.488000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:08:40.057]  [93222.492000] AP SETKEYS DONE - WPA2, AuthMode(7)=WPA2PSK, WepStatus(6)=AES, GroupWepStatus(6)=AES
+ [2022-12-03 12:08:40.058]  [93222.492000] 
+ [2022-12-03 12:08:40.058]  [93222.504000] kill_sig_client_associate_success,1213
+ [2022-12-03 12:08:40.489]  [93222.928000] Rcv Wcid(2) AddBAReq
+ [2022-12-03 12:08:40.489]  [93222.932000] Start Seq = 00000004
+ [2022-12-03 12:08:40.490]  [93222.936000] Rcv Wcid(2) AddBAReq
+ [2022-12-03 12:08:40.490]  [93222.940000] Start Seq = 00000001
+ [2022-12-03 12:08:40.933]  [93223.364000] AddTxSType: already registered TxSType (PID = 32, Format = 0
+ [2022-12-03 12:08:40.933]  [93223.368000] The 4-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 4
+ [2022-12-03 12:08:40.933]  [93223.376000] br0: port 2(ra1) entered disabled state
+ [2022-12-03 12:08:42.656]  [93225.092000] ALSA sound/usb/pcm.c:349 setting usb interface 1:1
+ [2022-12-03 12:15:14.679]  [93617.108000] ALSA sound/usb/pcm.c:349 setting usb interface 1:1
+ [2022-12-03 12:15:16.276]  [93618.708000] AddTxSType: already registered TxSType (PID = 32, Format = 0
+ [2022-12-03 12:15:16.277]  [93618.716000] AddTxSType: already registered TxSType (PID = 33, Format = 0
+ [2022-12-03 12:15:16.277]  [93618.724000] The 4-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 4
+ [2022-12-03 12:15:16.281]  [93618.732000] ##### mbss_cr_enable, BssId = 1
+ [2022-12-03 12:15:16.287]  [93618.736000] br0: port 2(ra1) entered forwarding state
+ [2022-12-03 12:15:16.316]  [93618.740000] br0: port 2(ra1) entered forwarding state
+ [2022-12-03 12:15:16.464]  [93618.896000] ALSA sound/usb/pcm.c:349 setting usb interface 1:1
+ [2022-12-03 12:15:17.301]  [93619.740000] br0: port 2(ra1) entered forwarding state
+ [2022-12-03 12:15:23.048]  [93625.468000] [yuxw ] 8e:85:80:fe:58:b1 client MAC: 04:17:b6:64:01:ff 
+ [2022-12-03 12:15:23.048]  [93625.476000] 04:17:b6:64:01:ff in
+ [2022-12-03 12:15:23.051]  [93625.480000] 04:17:b6:64:01:ff=================================> pRxBlk->wcid: 255
+ [2022-12-03 12:15:23.051]  [93625.484000] 
+ [2022-12-03 12:15:23.051]  [93625.484000] ***   get one auth request.
+ [2022-12-03 12:15:23.052]  [93625.484000] 
+ [2022-12-03 12:15:23.052]  [93625.492000] kill_sig_client_associate_begin,1184
+ [2022-12-03 12:15:23.087]  [93625.528000] PeerAssocReqSanity - IE_HT_CAP
+ [2022-12-03 12:15:23.228]  [93625.676000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:15:23.343]  [93625.776000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:15:23.344]  [93625.784000] AP SETKEYS DONE - WPA2, AuthMode(7)=WPA2PSK, WepStatus(6)=AES, GroupWepStatus(6)=AES
+ [2022-12-03 12:15:23.344]  [93625.784000] 
+ [2022-12-03 12:15:23.346]  [93625.792000] kill_sig_client_associate_success,1213
+ [2022-12-03 12:15:23.544]  [93625.980000] Rcv Wcid(1) AddBAReq
+ [2022-12-03 12:15:23.545]  [93625.984000] Start Seq = 00000004
+ [2022-12-03 12:15:23.751]  [93626.180000] ALSA sound/usb/pcm.c:349 setting usb interface 1:1
+ [2022-12-03 12:15:24.380]  [93626.804000] [yuxw ] 8e:85:80:fe:58:b1 client MAC: 04:17:b6:27:18:9a 
+ [2022-12-03 12:15:24.380]  [93626.812000] 04:17:b6:27:18:9a in
+ [2022-12-03 12:15:24.381]  [93626.812000] 04:17:b6:27:18:9a=================================> pRxBlk->wcid: 255
+ [2022-12-03 12:15:24.382]  [93626.820000] 
+ [2022-12-03 12:15:24.382]  [93626.820000] ***   get one auth request.
+ [2022-12-03 12:15:24.382]  [93626.820000] 
+ [2022-12-03 12:15:24.382]  [93626.828000] kill_sig_client_associate_begin,1184
+ [2022-12-03 12:15:24.483]  [93626.920000] PeerAssocReqSanity - IE_HT_CAP
+ [2022-12-03 12:15:24.791]  [93627.216000] Rcv Wcid(1) AddBAReq
+ [2022-12-03 12:15:24.791]  [93627.220000] Start Seq = 00000001
+ [2022-12-03 12:15:25.190]  [93627.620000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:15:25.542]  [93627.972000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:15:25.542]  [93627.976000] AP SETKEYS DONE - WPA2, AuthMode(7)=WPA2PSK, WepStatus(6)=AES, GroupWepStatus(6)=AES
+ [2022-12-03 12:15:25.543]  [93627.976000] 
+ [2022-12-03 12:15:25.543]  [93627.992000] kill_sig_client_associate_success,1213
+ [2022-12-03 12:15:28.799]  [93631.228000] da match,0x8e8580fe58b1
+ [2022-12-03 12:15:31.783]  [93634.228000] [yuxw ] 8c:85:80:ee:58:b1 client MAC: 04:17:b6:64:01:ff 
+ [2022-12-03 12:15:31.785]  [93634.236000] 04:17:b6:64:01:ff in
+ [2022-12-03 12:15:31.820]  [93634.236000] 04:17:b6:64:01:ff=================================> pRxBlk->wcid: 255
+ [2022-12-03 12:15:31.820]  [93634.244000] 
+ [2022-12-03 12:15:31.820]  [93634.244000] ***   get one auth request.
+ [2022-12-03 12:15:31.821]  [93634.244000] 
+ [2022-12-03 12:15:31.821]  [93634.252000] kill_sig_client_associate_begin,1184
+ [2022-12-03 12:15:31.900]  [93634.336000] PeerAssocReqSanity - IE_HT_CAP
+ [2022-12-03 12:15:32.050]  [93634.500000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:15:32.078]  [93634.524000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:15:32.088]  [93634.532000] AP SETKEYS DONE - WPA2, AuthMode(7)=WPA2PSK, WepStatus(6)=AES, GroupWepStatus(6)=AES
+ [2022-12-03 12:15:32.130]  [93634.532000] 
+ [2022-12-03 12:15:32.130]  [93634.544000] kill_sig_client_associate_success,1213
+ [2022-12-03 12:15:32.236]  [93634.676000] Rcv Wcid(1) AddBAReq
+ [2022-12-03 12:15:32.237]  [93634.680000] Start Seq = 00000004
+ [2022-12-03 12:15:32.883]  [93635.316000] Rcv Wcid(1) AddBAReq
+ [2022-12-03 12:15:32.883]  [93635.316000] Start Seq = 00000001
+ [2022-12-03 12:15:33.920]  [93636.356000] da match,0x8e8580fe58b1
+ [2022-12-03 12:15:34.017]  [93636.440000] AddTxSType: already registered TxSType (PID = 32, Format = 0
+ [2022-12-03 12:15:34.018]  [93636.448000] The 4-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 4
+ [2022-12-03 12:15:34.018]  [93636.456000] br0: port 2(ra1) entered disabled state
+ [2022-12-03 12:15:35.084]  [93637.508000] ALSA sound/usb/pcm.c:349 setting usb interface 1:1
+ [2022-12-03 12:15:38.626]  [93641.052000] [yuxw ] 8c:85:80:ee:58:b1 client MAC: 04:17:b6:27:18:9a 
+ [2022-12-03 12:15:38.627]  [93641.060000] 04:17:b6:27:18:9a in
+ [2022-12-03 12:15:38.627]  [93641.064000] 04:17:b6:27:18:9a=================================> pRxBlk->wcid: 255
+ [2022-12-03 12:15:38.627]  [93641.072000] 
+ [2022-12-03 12:15:38.627]  [93641.072000] ***   get one auth request.
+ [2022-12-03 12:15:38.628]  [93641.072000] 
+ [2022-12-03 12:15:38.631]  [93641.076000] kill_sig_client_associate_begin,1184
+ [2022-12-03 12:15:38.722]  [93641.156000] PeerAssocReqSanity - IE_HT_CAP
+ [2022-12-03 12:15:39.429]  [93641.864000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:15:39.534]  [93641.968000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:15:39.535]  [93641.972000] AP SETKEYS DONE - WPA2, AuthMode(7)=WPA2PSK, WepStatus(6)=AES, GroupWepStatus(6)=AES
+ [2022-12-03 12:15:39.535]  [93641.972000] 
+ [2022-12-03 12:15:39.538]  [93641.984000] kill_sig_client_associate_success,1213
+ [2022-12-03 12:15:46.359]  [93648.792000] da match,0x8c8580ee58b1
+ [2022-12-03 12:16:00.210]  [93662.648000] [yuxw ] 8c:85:80:ee:58:b1 client MAC: 04:17:b6:27:18:9a 
+ [2022-12-03 12:16:00.211]  [93662.652000] 04:17:b6:27:18:9a in
+ [2022-12-03 12:16:00.213]  [93662.656000] 04:17:b6:27:18:9a=================================> pRxBlk->wcid: 255
+ [2022-12-03 12:16:00.214]  [93662.664000] 
+ [2022-12-03 12:16:00.218]  [93662.664000] ***   get one auth request.
+ [2022-12-03 12:16:00.220]  [93662.664000] 
+ [2022-12-03 12:16:00.244]  [93662.672000] kill_sig_client_associate_begin,1184
+ [2022-12-03 12:16:00.360]  [93662.796000] PeerAssocReqSanity - IE_HT_CAP
+ [2022-12-03 12:16:01.449]  [93663.884000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:16:02.144]  [93664.580000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:16:02.145]  [93664.588000] AP SETKEYS DONE - WPA2, AuthMode(7)=WPA2PSK, WepStatus(6)=AES, GroupWepStatus(6)=AES
+ [2022-12-03 12:16:02.146]  [93664.588000] 
+ [2022-12-03 12:16:02.151]  [93664.596000] kill_sig_client_associate_success,1213
+ [2022-12-03 12:16:04.763]  [93667.188000] ALSA sound/usb/pcm.c:349 setting usb interface 1:1
+ [2022-12-03 12:16:06.349]  [93668.792000] AddTxSType: already registered TxSType (PID = 32, Format = 0
+ [2022-12-03 12:16:06.379]  [93668.800000] AddTxSType: already registered TxSType (PID = 33, Format = 0
+ [2022-12-03 12:16:06.379]  [93668.808000] The 4-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 4
+ [2022-12-03 12:16:06.380]  [93668.816000] ##### mbss_cr_enable, BssId = 1
+ [2022-12-03 12:16:06.380]  [93668.820000] br0: port 2(ra1) entered forwarding state
+ [2022-12-03 12:16:06.380]  [93668.824000] br0: port 2(ra1) entered forwarding state
+ [2022-12-03 12:16:06.502]  [93668.936000] ALSA sound/usb/pcm.c:349 setting usb interface 1:1
+ [2022-12-03 12:16:07.390]  [93669.824000] br0: port 2(ra1) entered forwarding state
+ [2022-12-03 12:16:13.784]  [93676.220000] ALSA sound/usb/pcm.c:349 setting usb interface 1:1
+ [2022-12-03 12:16:17.184]  [93679.624000] da match,0x8c8580ee58b1
+ [2022-12-03 12:16:20.222]  [93682.664000] [yuxw ] 8e:85:80:fe:58:b1 client MAC: 04:17:b6:64:01:ff 
+ [2022-12-03 12:16:20.249]  [93682.672000] 04:17:b6:64:01:ff in
+ [2022-12-03 12:16:20.250]  [93682.676000] 04:17:b6:64:01:ff=================================> pRxBlk->wcid: 255
+ [2022-12-03 12:16:20.251]  [93682.684000] 
+ [2022-12-03 12:16:20.251]  [93682.684000] ***   get one auth request.
+ [2022-12-03 12:16:20.251]  [93682.684000] 
+ [2022-12-03 12:16:20.252]  [93682.688000] kill_sig_client_associate_begin,1184
+ [2022-12-03 12:16:20.367]  [93682.800000] PeerAssocReqSanity - IE_HT_CAP
+ [2022-12-03 12:16:20.481]  [93682.908000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:16:20.575]  [93683.008000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:16:20.597]  [93683.012000] AP SETKEYS DONE - WPA2, AuthMode(7)=WPA2PSK, WepStatus(6)=AES, GroupWepStatus(6)=AES
+ [2022-12-03 12:16:20.597]  [93683.012000] 
+ [2022-12-03 12:16:20.600]  [93683.024000] kill_sig_client_associate_success,1213
+ [2022-12-03 12:16:20.688]  [93683.120000] Rcv Wcid(1) AddBAReq
+ [2022-12-03 12:16:20.688]  [93683.124000] Start Seq = 00000004
+ [2022-12-03 12:16:21.823]  [93684.256000] ALSA sound/usb/pcm.c:349 setting usb interface 1:1
+ [2022-12-03 12:16:22.081]  [93684.468000] Rcv Wcid(1) AddBAReq
+ [2022-12-03 12:16:22.081]  [93684.472000] Start Seq = 00000001
+ [2022-12-03 12:16:26.079]  [93688.520000] da match,0x8e8580fe58b1
+ [2022-12-03 12:16:29.112]  [93691.540000] [yuxw ] 8c:85:80:ee:58:b1 client MAC: 04:17:b6:64:01:ff 
+ [2022-12-03 12:16:29.112]  [93691.548000] 04:17:b6:64:01:ff in
+ [2022-12-03 12:16:29.112]  [93691.552000] 04:17:b6:64:01:ff=================================> pRxBlk->wcid: 255
+ [2022-12-03 12:16:29.112]  [93691.560000] 
+ [2022-12-03 12:16:29.114]  [93691.560000] ***   get one auth request.
+ [2022-12-03 12:16:29.116]  [93691.560000] 
+ [2022-12-03 12:16:29.120]  [93691.564000] kill_sig_client_associate_begin,1184
+ [2022-12-03 12:16:29.310]  [93691.732000] PeerAssocReqSanity - IE_HT_CAP
+ [2022-12-03 12:16:29.401]  [93691.844000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:16:29.489]  [93691.920000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 12:16:29.490]  [93691.924000] AP SETKEYS DONE - WPA2, AuthMode(7)=WPA2PSK, WepStatus(6)=AES, GroupWepStatus(6)=AES
+ [2022-12-03 12:16:29.490]  [93691.924000] 
+ [2022-12-03 12:16:29.492]  [93691.936000] kill_sig_client_associate_success,1213
+ [2022-12-03 12:16:29.546]  [93691.992000] Rcv Wcid(1) AddBAReq
+ [2022-12-03 12:16:29.549]  [93691.992000] Start Seq = 00000004
+ [2022-12-03 12:16:30.294]  [93692.724000] Rcv Wcid(1) AddBAReq
+ [2022-12-03 12:16:30.294]  [93692.728000] Start Seq = 00000001
+ [2022-12-03 12:16:30.790]  [93693.224000] AddTxSType: already registered TxSType (PID = 32, Format = 0
+ [2022-12-03 12:16:30.791]  [93693.232000] The 4-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 4
+ [2022-12-03 12:16:30.813]  [93693.240000] br0: port 2(ra1) entered disabled state
+ [2022-12-03 12:16:32.892]  [93695.336000] ALSA sound/usb/pcm.c:349 setting usb interface 1:1
+ [2022-12-03 13:07:28.022]  [96733.932000] da match,0x8c8580ee58b1
+ [2022-12-03 13:07:28.024]  [96739.960000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 13:07:28.025]  [96739.964000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 13:07:28.026]  [96739.968000] AP SETKEYS DONE - WPA2, AuthMode(7)=WPA2PSK, WepStatus(6)=AES, GroupWepStatus(6)=AES
+ [2022-12-03 13:07:28.027]  [96739.968000] 
+ [2022-12-03 13:07:28.027]  [96739.980000] AP SETKEYS DONE - WPA2, AuthMode(7)=WPA2PSK, WepStatus(6)=AES, GroupWepStatus(6)=AES
+ [2022-12-03 13:07:28.028]  [96739.980000] 
+ [2022-12-03 13:07:28.029]  [96741.520000] MtAsicAddSharedKeyEntry(1342): Not support for HIF_MT yet!
+ [2022-12-03 13:07:28.029]  [96741.524000] MtAsicAddSharedKeyEntry(1342): Not support for HIF_MT yet!
+ [2022-12-03 13:07:28.030]  [96747.224000] [yuxw ] 8c:85:80:ee:58:b1 client MAC: 04:17:b6:27:18:9a 
+ [2022-12-03 13:07:28.031]  [96747.228000] 04:17:b6:27:18:9a in
+ [2022-12-03 13:07:28.032]  [96747.232000] 04:17:b6:27:18:9a=================================> pRxBlk->wcid: 255
+ [2022-12-03 13:07:28.033]  [96747.240000] 
+ [2022-12-03 13:07:28.033]  [96747.240000] ***   get one auth request.
+ [2022-12-03 13:07:28.034]  [96747.240000] 
+ [2022-12-03 13:07:28.034]  [96747.248000] kill_sig_client_associate_begin,1184
+ [2022-12-03 13:07:28.035]  [96747.496000] PeerAssocReqSanity - IE_HT_CAP
+ [2022-12-03 13:07:28.036]  [96748.520000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 13:07:28.036]  [96749.192000] rx_eapol_frm_handle() at < 991 >
+ [2022-12-03 13:07:28.037]  [96749.196000] AP SETKEYS DONE - WPA2, AuthMode(7)=WPA2PSK, WepStatus(6)=AES, GroupWepStatus(6)=AES
+ [2022-12-03 13:07:28.038]  [96749.196000] 
+ [2022-12-03 13:07:28.038]  [96749.208000] kill_sig_client_associate_success,1213
+ [2022-12-03 13:07:44.262]  sh: /etc_ro/lighttpd/www/cgi-bin/firewall.cgi: not found
+ [2022-12-03 13:07:44.266]  sh: /etc_ro/lighttpd/www/cgi-bin/internet.cgi: not found
+ [2022-12-03 13:07:44.286]  /sbin/config-igmpproxy.sh: line 10: igmpproxy.sh: not found
+ [2022-12-03 13:07:44.287]  /sbin/config-igmpproxy.sh: line 12: igmpproxy: not found
+ [2022-12-03 13:07:44.287]  sh: /etc_ro/lighttpd/www/cgi-bin/qos.cgi: not found
+ [2022-12-03 13:07:44.288]  sh: /etc_ro/lighttpd/www/cgi-bin/internet.cgi: not found

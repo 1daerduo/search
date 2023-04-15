@@ -1,0 +1,82 @@
+{
+    "zx_p2p_command_read.*APP_CMD_DEVS_BIND_BROADCASE": {
+        "结果": "1.APP开始下发绑定，匹配次数：2",
+        "匹配项": [
+            "Line 6: 2023-04-10 14:03:32.443 [INFO][ppcs_interface.c:zx_p2p_command_read:5493] session_id:1, get:1038 APP_CMD_DEVS_BIND_BROADCASE, sign_code:2, param_len:144, PID:19247 --->",
+            "Line 7: 2023-04-10 14:03:32.445 [INFO][ppcs_interface.c:zx_p2p_command_read:7398] APP_CMD_DEVS_BIND_BROADCASE bind_timeout=30, bind_type=7 ret=0"
+        ]
+    },
+    "aplay -N /media/mmcblk0p1/en_voice/Add_DEV_ready.wav &": {
+        "结果": "2.基站播报准备OK，匹配次数：4",
+        "匹配项": [
+            "Line 11: 2023-04-10 14:03:32.448 [INFO][ai_interface.c:ai_play_wav:5170] aplay -N /media/mmcblk0p1/en_voice/Add_DEV_ready.wav &",
+            "Line 12: 2023-04-10 14:03:32.448 [INFO][remote_system.c:zx_remote_system_cmd:104] 000 alloc send cmdbuf:aplay -N /media/mmcblk0p1/en_voice/Add_DEV_ready.wav &, need_response:0, node:0x2521d78",
+            "Line 18: 2023-04-10 14:03:32.450 [INFO][remote_system.c:zx_remote_system_accept_node:273] cmd:aplay -N /media/mmcblk0p1/en_voice/Add_DEV_ready.wav & need_response:0",
+            "Line 20: 2023-04-10 14:03:32.450 [INFO][remote_system.c:zx_remote_system_free_node:367] 222 find delete node:0x2521d78, cmdbuf:aplay -N /media/mmcblk0p1/en_voice/Add_DEV_ready.wav &, fd:48"
+        ]
+    },
+    "ai_play_wav_default_NoAI.*player.wav": {
+        "结果": "3.播报声波音频，匹配次数：2",
+        "匹配项": [
+            "Line 32: 2023-04-10 14:03:33.463 [INFO][ai_interface.c:ai_play_wav_default_NoAI:4791] language:0, /tmp/player.wav",
+            "Line 43: 2023-04-10 14:03:41.527 [INFO][ai_interface.c:ai_play_wav_default_NoAI:4791] language:0, /tmp/player.wav"
+        ]
+    },
+    "Step1: ES_COMMON_TYPE_WIFI_INFO_REQ": {
+        "结果": "4.步骤1，设备连接成功，匹配次数：1",
+        "匹配项": [
+            "Line 67: 2023-04-10 14:03:43.042 [INFO][xm_interface.c:zx_msg_callback:3187] Step1: ES_COMMON_TYPE_WIFI_INFO_REQ, sdk_0, mac=04:17:B6:5D:A6:02, SN:T8210P8022450051"
+        ]
+    },
+    "zx_msg_callback.*Step2.*bind_channel.*mac=": {
+        "结果": "5.步骤2，分配，匹配次数：1",
+        "匹配项": [
+            "Line 248: 2023-04-10 14:03:51.945 [INFO][xm_interface.c:zx_msg_callback:3249] Step2: bind_channel=[0] sn=T8210P8022450051 mac=04:17:B6:5D:A6:02 dev_type=7 gsession_id=1 battery=0 wifiver[0.1.8.3] dspver[3.0.3.8]"
+        ]
+    },
+    "zx_notify_send.*APP_CMD_DEVS_BIND_NOTIFY": {
+        "结果": "6.通知APP绑定信息，匹配次数：1",
+        "匹配项": [
+            "Line 252: 2023-04-10 14:03:51.947 [INFO][ppcs_interface.c:zx_notify_send:12585] camera_1, APP_CMD_DEVS_BIND_NOTIFY, session_id:1"
+        ]
+    },
+    "zx_remote_system_accept_node.*ifconfig ra1 down": {
+        "结果": "7.关闭RA1，匹配次数：1",
+        "匹配项": [
+            "Line 256: 2023-04-10 14:03:51.951 [INFO][remote_system.c:zx_remote_system_accept_node:273] cmd:ifconfig ra1 down need_response:0"
+        ]
+    },
+    "zx_remote_system_free_node.*Add_DEV_success.wav": {
+        "结果": "8.播报绑定成功，匹配次数：1",
+        "匹配项": [
+            "Line 331: 2023-04-10 14:03:53.148 [INFO][remote_system.c:zx_remote_system_free_node:367] 222 find delete node:0x238b900, cmdbuf:aplay -N /media/mmcblk0p1/en_voice/Add_DEV_success.wav &, fd:54"
+        ]
+    },
+    "zx_set_devs_default_params": {
+        "结果": "9.设置默认参数，匹配次数：9",
+        "匹配项": [
+            "Line 314: 2023-04-10 14:03:53.137 [INFO][ppcs_interface.c:zx_set_devs_default_params:11526] camera_1, SN_T8210P8022450051, dev_type: 7, set default params start",
+            "Line 343: 2023-04-10 14:03:53.166 [INFO][ppcs_interface.c:zx_set_devs_default_params:11903] dev_pushmsg_mode = 0",
+            "Line 356: 2023-04-10 14:03:53.218 [INFO][ppcs_interface.c:zx_set_devs_default_params:12001] camera_1,ret:0 EufySdk_Led_SetEnable",
+            "Line 386: 2023-04-10 14:03:53.560 [INFO][ppcs_interface.c:zx_set_devs_default_params:12122] camera_1, speaker_volume:100, mic_volume:100",
+            "Line 426: 2023-04-10 14:03:54.504 [INFO][ppcs_interface.c:zx_set_devs_default_params:12150] camera_1, COMMON_TYPE_SET_AUDIOFMT:0x12, ret:0......",
+            "Line 427: 2023-04-10 14:03:54.504 [INFO][ppcs_interface.c:zx_set_devs_default_params:12182] gop_interval:30",
+            "Line 445: 2023-04-10 14:03:54.855 [INFO][ppcs_interface.c:zx_set_devs_default_params:12218] COMMON_TYPE_SET_OSDMODE:2, ret:0......",
+            "Line 559: 2023-04-10 14:03:56.307 [INFO][ppcs_interface.c:zx_set_devs_default_params:12534] camera_1, pdev_param->dev_bat_doorbell_ringtone_volume:80 pdev_param->dev_speaker_volume:100 pdev_param->dev_ir_cut_status:1!",
+            "Line 560: 2023-04-10 14:03:56.308 [INFO][ppcs_interface.c:zx_set_devs_default_params:12535] camera_1, set default params end!"
+        ]
+    },
+    "zx_p2p_command_read.*APP_CMD_SET_DEVS_NAME": {
+        "结果": "10.设置设备名字，匹配次数：2",
+        "匹配项": [
+            "Line 325: 2023-04-10 14:03:53.143 [INFO][ppcs_interface.c:zx_p2p_command_read:5493] session_id:1, get:1217 APP_CMD_SET_DEVS_NAME, sign_code:2, param_len:272, PID:19247 --->",
+            "Line 414: 2023-04-10 14:03:54.341 [INFO][ppcs_interface.c:zx_p2p_command_read:10116] APP_CMD_SET_DEVS_NAME dev_name[Doorbell] ret=0"
+        ]
+    },
+    "zx_upload_devs_default_params.*err.code=0 msg=Succeed": {
+        "结果": "11.更新莫默认参数成功，匹配次数：1",
+        "匹配项": [
+            "Line 619: 2023-04-10 14:03:58.723 [INFO][as_interface.c:zx_upload_devs_default_params:4628] camera_1, err.code=0 msg=Succeed."
+        ]
+    }
+}
