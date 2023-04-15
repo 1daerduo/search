@@ -54,7 +54,7 @@ try:
                     # 匹配到规则后，将规则添加到输出字典中
                     if rule not in output_dict:
                         output_dict[rule] = {'匹配项': []}
-                    output_dict[rule]['匹配项'].append(line.strip())
+                    #output_dict[rule]['匹配项'].append(line.strip())
                     rules.remove(rule)  # 匹配到规则后，从列表中删除该规则
                     break  # 匹配到规则后，跳出内层循环
 
