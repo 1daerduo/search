@@ -38,7 +38,7 @@ else:
     all_tables = False
     #table_name = input("请输入要读取的工作表名称或索引：")
     if 'table' not in params:
-        print('请指定需要匹配的工作表')
+        print('请指定需要匹配的工作表 例如，test.py table=Sheet2')
         sys.exit()
     else:
         table_name = params['table']
@@ -66,17 +66,17 @@ for table, rule_df in rules.items():
             for line_num, line in enumerate(log_file):
                 if regex.search(line):
                     count += 1
-                    match_lines.append(f'{line_num} {line.strip()}')
+                    match_lines.append(f'line-{line_num}  {line.strip()}')
         if count > 0:
             output[table][rule['规则']] = {
                 '匹配项目': match_lines,
-                '次数': count,
-                '结果': rule['结果']
+                '结果': rule['结果'],
+                '次数': count
             }
-        if len(output[table]) == len(rule_df):
-            output[table]['判定'] = '成功'
-        else:
-            output[table]['判定'] = '失败'
+    if len(output[table]) == len(rule_df):
+        output[table]['判定'] = '成功'
+    else:
+        output[table]['判定'] = '失败'
 
 # 5.匹配工作完成
 # 5.1 输出json文本
