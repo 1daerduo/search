@@ -12,11 +12,7 @@ from tkinter import scrolledtext
 root = tk.Tk()
 root.withdraw()
 
-# 选择日志文件
-log_file_path = filedialog.askopenfilename(title='选择日志文件', filetypes=[('日志文件', '*.txt'),('日志文件', '*.log')])
 
-# 选择规则文件，规则文件的中每个工作边又两列分别为：”规则“和”结果“
-rules_file_path = filedialog.askopenfilename(title='选择规则文件', filetypes=[('Excel文件', '*.xlsx')])
 
 # 1.获取参数，存储到一个参数结构中。
 params = {}
@@ -30,6 +26,14 @@ for arg in sys.argv[1:]:
 print('所有参数：')
 for key, value in params.items():
     print(f'{key}: {value}')
+if 'H' in params or 'h' in params:
+    print('-h: 获取参数帮助')
+    print('-t: 根据当前时间生成json文件')
+    print('-w: windown窗口显示')
+    print('-p: windown窗口打印匹配')
+    print('-a: 选择所有的工作表')
+    print('table=Sheet2: 选择Sheet2工作表')
+    sys.exit()
     
 # 2.如果参数中有“a”或者“A”，调用#4的程序时候，使用的规则结构是所有工作表的规则，
 # 如果没有则提示使用者指定工作表，然后调用#4时使用指定的工作表的规则（即只匹配其中一个工作表）。
@@ -43,6 +47,12 @@ else:
         sys.exit()
     else:
         table_name = params['table']
+        
+# 选择日志文件
+log_file_path = filedialog.askopenfilename(title='选择日志文件', filetypes=[('日志文件', '*.txt'),('日志文件', '*.log')])
+
+# 选择规则文件，规则文件的中每个工作边又两列分别为：”规则“和”结果“
+rules_file_path = filedialog.askopenfilename(title='选择规则文件', filetypes=[('Excel文件', '*.xlsx')])
 
 # 3.打开规则文件，读取其内包括的所有工作表的名称，存储到一个规则结构中，
 # 并且结构按照规则表来区分。
