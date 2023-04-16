@@ -67,7 +67,9 @@ for sheet_name in rules:
     else:
         rules[sheet_name]["判定"] = "失败"
 
+
 # 4.如果参数中有“a”或者“A”，调用#3的程序使用的规则结构是所有工作表的规则，如果没有则提示使用者指定工作表，然后调用#3时使用指定工作表的规则。
+
 if 'a' in args or 'A' in args:
     pass
 else:
