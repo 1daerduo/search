@@ -23,14 +23,20 @@ for arg in sys.argv[1:]:
     if arg.startswith('-'):
         params[arg[1:].lower()] = True
     else:
-        params[arg.split('=')[0].lower()] = arg.split('=')[1]
-
+        key, value = arg.split('=')
+        params[key.lower()] = value
+        
+print('所有参数：')
+for key, value in params.items():
+    print(f'{key}: {value}')
+    
 # 2.如果参数中有“a”或者“A”，调用#4的程序时候，使用的规则结构是所有工作表的规则，
 # 如果没有则提示使用者指定工作表，然后调用#4时使用指定的工作表的规则（即只匹配其中一个工作表）。
 if 'a' in params or 'A' in params:
     all_tables = True
 else:
     all_tables = False
+    #table_name = input("请输入要读取的工作表名称或索引：")
     if 'table' not in params:
         print('请指定需要匹配的工作表')
         sys.exit()
