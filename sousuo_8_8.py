@@ -101,6 +101,7 @@ if 'w' in params or 'W' in params:
     text = scrolledtext.ScrolledText(root, wrap=tk.WORD)
     text.pack(expand=True, fill='both')
     text.insert('end', output_text)
+    text.config(state='disabled')  # 禁止编辑
     root.mainloop()
 
 # 7.对于#4.2.5的匹配结果应该输出到CMD窗口，让运行者第一时间直到整个匹配的结果。
