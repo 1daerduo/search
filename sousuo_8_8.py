@@ -6,6 +6,7 @@ import json
 import sys
 import datetime
 from collections import OrderedDict
+from tkinter import scrolledtext
 
 # 创建窗口
 root = tk.Tk()
@@ -93,11 +94,12 @@ with open(json_file_name, 'w', encoding='utf-8') as output_file:
 # 6.如果输出的参数有“w”或者“W”，需要将这些json文本以方便查看的方式输出到windown窗口。
 if 'w' in params or 'W' in params:
     with open(json_file_name, 'r', encoding='utf-8') as output_file:
-        output_text = output_file.read()
+        output_data = json.load(output_file)
+    output_text = json.dumps(output_data, indent=4, ensure_ascii=False)
     root = tk.Tk()
     root.title('匹配结果')
-    text = tk.Text(root)
-    text.pack()
+    text = scrolledtext.ScrolledText(root, wrap=tk.WORD)
+    text.pack(expand=True, fill='both')
     text.insert('end', output_text)
     root.mainloop()
 
