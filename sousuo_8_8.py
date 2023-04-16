@@ -100,7 +100,16 @@ if 'w' in params or 'W' in params:
     root.title('匹配结果')
     text = scrolledtext.ScrolledText(root, wrap=tk.WORD)
     text.pack(expand=True, fill='both')
+    text.tag_config('fail', foreground='red')
     text.insert('end', output_text)
+    start = '1.0'
+    while True:
+        start = text.search('判定', start, stopindex='end')
+        if not start:
+            break
+        end = f'{start}+{len(" 判定 :  失败")}c'
+        text.tag_add('fail', start, end)
+        start = end
     text.config(state='disabled')  # 禁止编辑
     root.mainloop()
 
