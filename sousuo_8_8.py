@@ -26,13 +26,19 @@ for arg in sys.argv[1:]:
 print('所有参数：')
 for key, value in params.items():
     print(f'{key}: {value}')
-if 'H' in params or 'h' in params:
-    print('-h: 获取参数帮助')
-    print('-t: 根据当前时间生成json文件')
-    print('-w: windown窗口显示')
-    print('-p: windown窗口打印匹配')
-    print('-a: 选择所有的工作表')
-    print('table=Sheet2: 选择Sheet2工作表')
+    
+if 'H' in params or 'h' in params or 'help' in params:
+    print()
+    print('*********************************************')
+    print('--: 以下为支持参数(包含"-"):                *')
+    print('-h: 获取参数帮助                            *')
+    print('-t: 根据当前时间生成json文件                *')
+    print('-w: windown窗口显示                         *')
+    print('-p: CMD窗口打印匹配                         *')
+    print('-a: 选择所有的工作表                        *')
+    print('table=Sheet2: 选择Sheet2工作表              *')
+    print('示例: python sousuo_8.8.py table=bind -t -w *')
+    print('*********************************************')
     sys.exit()
     
 # 2.如果参数中有“a”或者“A”，调用#4的程序时候，使用的规则结构是所有工作表的规则，
