@@ -95,7 +95,13 @@ for table, rule_df in rules.items():
     else:
         output[table]['判定'] = '失败'
         failed_rules = set(rule_df['规则']) - set(output[table].keys())
-        output[table]['失败规则'] = list(failed_rules)
+        if not list(failed_rules):
+            print('没有未匹配的规则，可能规则表重复')
+            output[table]['判定'] = '成功'
+            output[table]['失败规则'] = '有规则表重复...请检查规则列'
+        else:
+            output[table]['失败规则'] = list(failed_rules)
+
 
 
 # 5.匹配工作完成
@@ -136,9 +142,9 @@ if 'p' in params or 'P' in params:
         for rule, info in result.items():
             if rule != '判定' and rule != '失败规则':
                 print(f'规则：{rule}，次数：{info["次数"]}，结果：{info["结果"]}')
-                print('匹配项目：')
-                for line in info['匹配项目']:
-                    print(line)
+                #print('匹配项目：')
+                #for line in info['匹配项目']:
+                #    print(line)
                 print()
         print(f'判定：{result["判定"]}')
         print(f'失败规则：{result["失败规则"]}')
