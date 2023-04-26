@@ -71,46 +71,86 @@ with pd.ExcelFile(rules_file_path) as xls:
 # 3.1然后创建一个全局json结构
 output = {}
 
-for log_file_path in log_file_paths:    
-# 4.打开规则文件读取某一个工作表中的所有规则，存储到结构中；
-    output[log_file_path] = {}
-    for table, rule_df in rules.items():
-        if not all_tables and table != table_name:
-            continue
-        output[log_file_path][table] = {}
-        for _, rule in rule_df.iterrows():
-            regex = re.compile(rule['规则'])
-            count = 0
-            match_lines = []
-            
-            with open(log_file_path, 'r', encoding='utf-8') as log_file:
-                for line_num, line in enumerate(log_file):
-                    if regex.search(line):
-                        count += 1
-                        match_lines.append(f'line-{line_num}  {line.strip()}')
-            if count > 0:
-                if 'l' in params or 'L' in params:
-                    output[log_file_path][table][rule['规则']] = {
-                        '结果': rule['结果'],                                       
-                        '次数': count,
-                        '匹配项目': match_lines
-                    }
+# from_reg 输出的json报表更好看，按照规则作为键，文件名作为子项
+if 'from_reg' in params:     
+    # 4.打开规则文件读取某一个工作表中的所有规则，存储到结构中；
+        for table, rule_df in rules.items():
+            if not all_tables and table != table_name:
+                continue
+            output[table] = {}
+            for _, rule in rule_df.iterrows():
+                regex = re.compile(rule['规则'])
+                count = 0
+                regex_count = 0
+                match_lines = []
+                output[table][rule['规则']] = {}
+                
+                for log_file_path in log_file_paths:
+                    output[table][rule['规则']][log_file_path] = {}
+                    count = 0
+                    with open(log_file_path, 'r', encoding='utf-8') as log_file:
+                        for line_num, line in enumerate(log_file):
+                            if regex.search(line):
+                                count += 1
+                                match_lines.append(f'line-{line_num}  {line.strip()}')
+                    if count > 0:
+                        if 'l' in params or 'L' in params:
+                            output[table][rule['规则']][log_file_path] = {
+                                '结果': rule['结果'],                                       
+                                '次数': count,
+                                '匹配项目': match_lines
+                            }
+                        else:
+                            output[table][rule['规则']][log_file_path] = {
+                                '结果': rule['结果'],                                       
+                                '次数': count,
+                        }
+                    regex_count +=  count   
+                if regex_count > 0:
+                    output[table][rule['规则']]['所有文件查到次'] = regex_count
                 else:
-                    output[log_file_path][table][rule['规则']] = {
-                        '结果': rule['结果'],                                       
-                        '次数': count,
-                    }                    
-        if len(output[log_file_path][table]) == len(rule_df):
-            output[log_file_path][table]['判定'] = '成功'
-        else:
-            output[log_file_path][table]['判定'] = '失败'
-            failed_rules = set(rule_df['规则']) - set(output[log_file_path][table].keys())
-            if not list(failed_rules):
-                print('没有未匹配的规则，可能规则表重复')
+                    output[table][rule['规则']]['所有文件查到次'] = 0
+else:
+    for log_file_path in log_file_paths:    
+    # 4.打开规则文件读取某一个工作表中的所有规则，存储到结构中；
+        output[log_file_path] = {}
+        for table, rule_df in rules.items():
+            if not all_tables and table != table_name:
+                continue
+            output[log_file_path][table] = {}
+            for _, rule in rule_df.iterrows():
+                regex = re.compile(rule['规则'])
+                count = 0
+                match_lines = []
+                
+                with open(log_file_path, 'r', encoding='utf-8') as log_file:
+                    for line_num, line in enumerate(log_file):
+                        if regex.search(line):
+                            count += 1
+                            match_lines.append(f'line-{line_num}  {line.strip()}')
+                if count > 0:
+                    if 'l' in params or 'L' in params:
+                        output[log_file_path][table][rule['规则']] = {
+                            '结果': rule['结果'],                                       
+                            '次数': count,
+                            '匹配项目': match_lines
+                        }
+                    else:
+                        output[log_file_path][table][rule['规则']] = {
+                            '结果': rule['结果'],                                       
+                            '次数': count,
+                        }                    
+            if len(output[log_file_path][table]) == len(rule_df):
                 output[log_file_path][table]['判定'] = '成功'
-                output[log_file_path][table]['失败规则'] = '有规则表重复...请检查规则列'
             else:
-                output[log_file_path][table]['失败规则'] = list(failed_rules)
+                output[log_file_path][table]['判定'] = '失败'
+                failed_rules = set(rule_df['规则']) - set(output[log_file_path][table].keys())
+                if not list(failed_rules):
+                    print('没有未匹配的规则，可能规则表重复')
+                    output[log_file_path][table]['判定'] = '成功'
+                    output[log_file_path][table]['失败规则'] = '有规则表重复...请检查规则列'
+                else:
+                    output[log_file_path][table]['失败规则'] = list(failed_rules)
 
 
 
