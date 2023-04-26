@@ -88,11 +88,12 @@ if 'from_reg' in params:
                 for log_file_path in log_file_paths:
                     output[table][rule['规则']][log_file_path] = {}
                     count = 0
+                    match_lines = []
                     with open(log_file_path, 'r', encoding='utf-8') as log_file:
                         for line_num, line in enumerate(log_file):
                             if regex.search(line):
                                 count += 1
-                                match_lines.append(f'line-{line_num}  {line.strip()}')
+                                match_lines.append(f'line-{line_num+1}  {line.strip()}')
                     if count > 0:
                         if 'l' in params or 'L' in params:
                             output[table][rule['规则']][log_file_path] = {
@@ -127,7 +128,7 @@ else:
                     for line_num, line in enumerate(log_file):
                         if regex.search(line):
                             count += 1
-                            match_lines.append(f'line-{line_num}  {line.strip()}')
+                            match_lines.append(f'line-{line_num+1}  {line.strip()}')
                 if count > 0:
                     if 'l' in params or 'L' in params:
                         output[log_file_path][table][rule['规则']] = {
