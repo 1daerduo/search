@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import re
 import tkinter as tk
 from tkinter import filedialog
@@ -7,22 +8,31 @@ root = tk.Tk()
 root.withdraw()
 
 # 打开文件选择对话框
-file_path = filedialog.askopenfilename()
+#file_path = filedialog.askopenfilename()
+file_paths = filedialog.askopenfilenames(title='选择日志文件')
 
 # 打开选择的文件
-with open(file_path, 'r', encoding='utf-8') as f:
-    text = f.read()
+# 运行时间和出流时间的统计
+stream_dict = {}
+for file_path in file_paths:
+    with open(file_path, 'r', encoding='utf-8') as f:
+        text = f.read()
 
-# 使用正则表达式匹配数字
-pattern = r"camera_0, SN:T8210.*, open_duration:(\d+)ms"
-matches = re.findall(pattern, text)
+    # 使用正则表达式匹配数字
+    pattern = r"camera_0, SN:([A-Z0-9]{16}), open_duration:(\d+)ms.*stream_time:(\d+)ms"
+    matches = re.findall(pattern, text)
 
-# 将所有匹配到的数字叠加起来
-total_duration = 0
-count = 0
-for match in matches:
-    print('count',count, 'match', match)
-    count += 1
-    total_duration += int(match)
+    # 将所有匹配到的流时间求和
+    for match in matches:
+        if stream_dict.get(match[0]) == None:
+            stream_dict[match[0]] = {}
+            stream_dict[match[0]]['count'] = 0
+            stream_dict[match[0]]['total_duration'] = 0
+            stream_dict[match[0]]['total_duration_stream'] = 0
+        stream_dict[match[0]]['count'] += 1
+        stream_dict[match[0]]['total_duration'] += int(match[1])
+        stream_dict[match[0]]['total_duration_stream'] += int(match[2])
 
-print(total_duration)
+for num in stream_dict:
+    print('SN:',num, '记录次数:', stream_dict[num]['count'], '总计运行时间(ms):',stream_dict[num]['total_duration'],'总计出流时间(ms):', stream_dict[num]['total_duration_stream'])
+    
