@@ -19,7 +19,7 @@ for file_path in file_paths:
         text = f.read()
 
     # 使用正则表达式匹配数字
-    pattern = r"camera_0, SN:([A-Z0-9]{16}), open_duration:(\d+)ms.*stream_time:(\d+)ms"
+    pattern = r"camera_.*, SN:([A-Z0-9]{16}), open_duration:(\d+)ms.*stream_time:(\d+)ms"
     matches = re.findall(pattern, text)
 
     # 将所有匹配到的流时间求和
