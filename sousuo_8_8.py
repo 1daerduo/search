@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import tkinter as tk
 from tkinter import filedialog
 import pandas as pd
@@ -37,6 +40,7 @@ if 'H' in params or 'h' in params or 'help' in params:
     print('-p: CMD窗口打印匹配                         *')
     print('-a: 选择所有的工作表                        *')
     print('-l: 选择抓取抓取匹配细节                    *')
+    print('-from_reg:类似notepad的搜索列表，更好看     *')
     print('table=Sheet2: 选择Sheet2工作表              *')
     print('示例: python sousuo_8.8.py table=bind -t -w *')
     print('*********************************************')
