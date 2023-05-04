@@ -16,6 +16,7 @@ file_paths = filedialog.askopenfilenames(title='选择日志文件')
 # 抓取SN号，基站SN号，pir触发次数，总pir录像，有效录像个数，录像文件名，录像错误码搜集，
 # 打开选择的文件
 stream_dict = {}
+EffectiveVideo = {}
 for file_path in file_paths:
     with open(file_path, 'r', encoding='utf-8') as f:
         text = f.read()
@@ -37,13 +38,31 @@ for file_path in file_paths:
         stream_dict[match[1]]['camera_' + match[0]]['统计次数'] += 1
         stream_dict[match[1]]['camera_' + match[0]]['总运行时间(ms)'] += int(match[2])
         stream_dict[match[1]]['camera_' + match[0]]['总出流时间(ms)'] += int(match[3])
+
     # 获取总录像次数
-    pattern = r"zyy camera_.*, dev_type:.*, has_mdetect_even:.*, has_human:0x.*, record_file_state:.*, frame_num:.*, discard_record_flag:0x.*"
-    matches_stream = re.findall(pattern, text)    
+    pattern = r"zyy camera_(\d+), dev_type:(\d+), has_mdetect_even:.*, has_human:0x.*, record_file_state:.*, frame_num:.*, discard_record_flag:0x(\d+)"
+    matches_videos = re.findall(pattern, text)    
+    for match in matches_videos:
+        if EffectiveVideo.get('camera_' + match[0]) == None:
+            EffectiveVideo['camera_' + match[0]] = {}
+            EffectiveVideo['camera_' + match[0]]['总录像'] = 0
+            EffectiveVideo['camera_' + match[0]]['有效录像'] = 0
+            EffectiveVideo['camera_' + match[0]]['设备类型'] = int(match[1])
+            EffectiveVideo['camera_' + match[0]]['无效'] = {}
+            
+        EffectiveVideo['camera_' + match[0]]['总录像'] += 1
+        print('match[2]:', int(match[2]))
+        if int(match[2]) == 0:
+            EffectiveVideo['camera_' + match[0]]['有效录像'] += 1
+        else:
+            if (EffectiveVideo['camera_' + match[0]]['无效']).get('总记') == None:
+                EffectiveVideo['camera_' + match[0]]['无效']['总记'] = 0
+            EffectiveVideo['camera_' + match[0]]['无效']['总记'] += 1  
+            
+            if (EffectiveVideo['camera_' + match[0]]['无效']).get(match[2]) == None:
+                EffectiveVideo['camera_' + match[0]]['无效'][match[2]] = 0
+            EffectiveVideo['camera_' + match[0]]['无效'][match[2]] += 1
 
-#for num in stream_dict:
-#    print('SN:',num, '记录次数:', stream_dict[num]['count'], '总计运行时间(ms):',stream_dict[num]['total_duration'],'总计出流时间(ms):', stream_dict[num]['total_duration_stream'])
-
-#print('stream_dict', stream_dict)
-
-print(json.dumps(stream_dict, indent=4, ensure_ascii=False))
+print('出流统计:\n', json.dumps(stream_dict, indent=4, ensure_ascii=False))
+print()
+print('录像统计:\n', json.dumps(EffectiveVideo, indent=4, ensure_ascii=False))
