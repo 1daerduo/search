@@ -19,12 +19,16 @@ root.withdraw()
 
 # 1.获取参数，存储到一个参数结构中。
 params = {}
+table_get = []
 for arg in sys.argv[1:]:
     if arg.startswith('-'):
         params[arg[1:].lower()] = True
     else:
         key, value = arg.split('=')
-        params[key.lower()] = value
+        #params[key.lower()] = value
+        if key == 'table':
+            table_get.append(value)
+        params[key.lower()] = table_get
         
 print('所有参数：')
 for key, value in params.items():
@@ -79,7 +83,7 @@ output = {}
 if 'from_reg' in params:     
     # 4.打开规则文件读取某一个工作表中的所有规则，存储到结构中；
         for table, rule_df in rules.items():
-            if not all_tables and table != table_name:
+            if not all_tables and table not in table_name: #and table != table_name:
                 continue
             output[table] = {}
             for _, rule in rule_df.iterrows():
@@ -120,7 +124,7 @@ else:
     # 4.打开规则文件读取某一个工作表中的所有规则，存储到结构中；
         output[log_file_path] = {}
         for table, rule_df in rules.items():
-            if not all_tables and table != table_name:
+            if not all_tables and table not in table_name: #and table != table_name:
                 continue
             output[log_file_path][table] = {}
             for _, rule in rule_df.iterrows():
