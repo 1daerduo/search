@@ -115,10 +115,17 @@ if 'from_reg' in params:
                                 '次数': count,
                         }
                     regex_count +=  count   
+                    output[table][rule['规则']][log_file_path + ' (匹配' + str(count) + '次) '] = output[table][rule['规则']][log_file_path]
+                    output[table][rule['规则']].pop(log_file_path)
+                
                 if regex_count > 0:
                     output[table][rule['规则']]['所有文件查到次'] = regex_count
                 else:
                     output[table][rule['规则']]['所有文件查到次'] = 0
+                    
+                output[table][rule['规则'] + ' (总计'+ str(regex_count) + '次) '] = output[table][rule['规则']]
+                output[table].pop(rule['规则'])
+                
 else:
     for log_file_path in log_file_paths:    
     # 4.打开规则文件读取某一个工作表中的所有规则，存储到结构中；
