@@ -97,7 +97,8 @@ if 'from_reg' in params:
                     output[table][rule['规则']][log_file_path] = {}
                     count = 0
                     match_lines = []
-                    with open(log_file_path, 'r', encoding='utf-8') as log_file:
+                    #print("log_file_path:", log_file_path)
+                    with open(log_file_path, 'r', encoding='utf-8', errors='ignore') as log_file:
                         for line_num, line in enumerate(log_file):
                             if regex.search(line):
                                 count += 1
