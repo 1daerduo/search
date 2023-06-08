@@ -28,7 +28,9 @@ for arg in sys.argv[1:]:
         #params[key.lower()] = value
         if key == 'table':
             table_get.append(value)
-        params[key.lower()] = table_get
+            params[key.lower()] = table_get
+        elif key == 'name':
+            params[key.lower()] = value
         
 print('所有参数：')
 for key, value in params.items():
@@ -45,7 +47,8 @@ if 'H' in params or 'h' in params or 'help' in params:
     print('-a: 选择所有的工作表                        *')
     print('-l: 选择抓取抓取匹配细节                    *')
     print('-from_reg:类似notepad的搜索列表，更好看     *')
-    print('table=Sheet2: 选择Sheet2工作表              *')
+    print('table=Sheet2: 选择Sheet2工作表(可多个表组合)*')
+    print('name=T8210C: 添加自定义的文字作为json文件名 *')
     print('示例: python sousuo_8.8.py table=bind -t -w *')
     print('*********************************************')
     sys.exit()
@@ -173,8 +176,8 @@ else:
 
 # 5.匹配工作完成
 # 5.1 输出json文本
-if 't' in params or 'T' in params:
-    json_file_name = f'output_{datetime.datetime.now().strftime("%Y%m%d%H%M%S")}.json'
+if 't' in params or 'T' in params or 'name' in params:
+    json_file_name = f'output_{params.get("name", "")}_{datetime.datetime.now().strftime("%Y%m%d%H%M%S")}.json'
 else:
     json_file_name = 'output.json'
 with open(json_file_name, 'w', encoding='utf-8') as output_file:
