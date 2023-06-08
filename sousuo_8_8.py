@@ -177,7 +177,12 @@ else:
 # 5.匹配工作完成
 # 5.1 输出json文本
 if 't' in params or 'T' in params or 'name' in params:
-    json_file_name = f'output_{params.get("name", "")}_{datetime.datetime.now().strftime("%Y%m%d%H%M%S")}.json'
+    json_file_name = 'output'
+    if 'name' in params:
+        json_file_name += f'_{params.get("name", "")}'
+    if 't' in params or 'T' in params:
+        json_file_name += f'_{datetime.datetime.now().strftime("%Y%m%d%H%M%S")}'
+    json_file_name += '.json'
 else:
     json_file_name = 'output.json'
 with open(json_file_name, 'w', encoding='utf-8') as output_file:
