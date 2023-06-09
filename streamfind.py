@@ -15,7 +15,7 @@ file_paths = filedialog.askopenfilenames(title='选择日志文件')
 # 运行时间和出流时间的统计
 stream_dict = {}
 for file_path in file_paths:
-    with open(file_path, 'r', encoding='utf-8') as f:
+    with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
         text = f.read()
 
     # 使用正则表达式匹配数字
