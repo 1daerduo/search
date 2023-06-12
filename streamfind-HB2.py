@@ -34,5 +34,5 @@ for file_path in file_paths:
         stream_dict[match[0]]['total_duration_stream'] += int(match[2])
 
 for num in stream_dict:
-    print('SN:',num, '记录次数:', stream_dict[num]['count'], '总计运行时间(ms):',stream_dict[num]['total_duration'],'总计出流时间(ms):', stream_dict[num]['total_duration_stream'])
+    print('SN:',num, '记录次数:', stream_dict[num]['count'], '总计运行时间(ms):',stream_dict[num]['total_duration'],'总计上流花费时间(ms):', stream_dict[num]['total_duration_stream'])
     
