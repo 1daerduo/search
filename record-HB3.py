@@ -88,4 +88,4 @@ if 's' in params:
 #elif 'k' in params:
 #    sorted_dict = dict(sorted(stream_dict.items(), key=lambda x: x[0]))
 for num in sorted_dict:
-    print('cam:',num, 'SN:', stream_dict[num]['SN'],'录像计数:', sorted_dict[num]['count'], '总计运行时间(ms):',sorted_dict[num]['total_record'])
+    print('cam:',num, 'SN:', stream_dict[num].get('SN', 'N/A'),'录像计数:', sorted_dict[num]['count'], '总计运行时间(ms):',sorted_dict[num]['total_record'])
