@@ -10,13 +10,23 @@ import sys
 import datetime
 from collections import OrderedDict
 from tkinter import scrolledtext
+import os
 
 # 创建窗口
 root = tk.Tk()
 root.withdraw()
 
+current_dir = os.getcwd()
+#print("Current directory:", current_dir)
+output_dir = current_dir + '\output'
+#print("output_dir:", output_dir)
 
-
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+    #print(f"Directory '{output_dir}' created successfully!")
+#else:
+    #print(f"Directory '{output_dir}' already exists!")
+    
 # 1.获取参数，存储到一个参数结构中。
 params = {}
 table_get = []
@@ -185,7 +195,7 @@ if 't' in params or 'T' in params or 'name' in params:
     json_file_name += '.json'
 else:
     json_file_name = 'output.json'
-with open(json_file_name, 'w', encoding='utf-8') as output_file:
+with open(f'{output_dir}\{json_file_name}', 'w', encoding='utf-8') as output_file:
     json.dump(output, output_file, ensure_ascii=False, indent=4)
 
 # 6.如果输出的参数有“w”或者“W”，需要将这些json文本以方便查看的方式输出到windown窗口。
