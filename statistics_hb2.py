@@ -33,11 +33,11 @@ for file_path in file_paths:
             stream_dict[match[1]]['camera_' + match[0]] = {}
             stream_dict[match[1]]['camera_' + match[0]]['统计次数'] = 0
             stream_dict[match[1]]['camera_' + match[0]]['总运行时间(ms)'] = 0
-            stream_dict[match[1]]['camera_' + match[0]]['总出流时间(ms)'] = 0           
+            stream_dict[match[1]]['camera_' + match[0]]['出流耗时(ms)'] = 0           
 
         stream_dict[match[1]]['camera_' + match[0]]['统计次数'] += 1
         stream_dict[match[1]]['camera_' + match[0]]['总运行时间(ms)'] += int(match[2])
-        stream_dict[match[1]]['camera_' + match[0]]['总出流时间(ms)'] += int(match[3])
+        stream_dict[match[1]]['camera_' + match[0]]['出流耗时(ms)'] += int(match[3])
 
     # 获取总录像次数
     pattern = r"zyy camera_(\d+), dev_type:(\d+), has_mdetect_even:.*, has_human:0x.*, record_file_state:.*, frame_num:.*, discard_record_flag:0x(\d+)"
@@ -51,7 +51,7 @@ for file_path in file_paths:
             EffectiveVideo['camera_' + match[0]]['无效'] = {}
             
         EffectiveVideo['camera_' + match[0]]['总录像'] += 1
-        print('match[2]:', int(match[2]))
+        #print('match[2]:', int(match[2]))
         if int(match[2]) == 0:
             EffectiveVideo['camera_' + match[0]]['有效录像'] += 1
         else:
