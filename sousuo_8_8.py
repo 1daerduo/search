@@ -43,7 +43,7 @@ if 'H' in params or 'h' in params or 'help' in params:
     print('-h: 获取参数帮助                            *')
     print('-t: 根据当前时间生成json文件                *')
     print('-w: windown窗口显示                         *')
-    print('-p: CMD窗口打印匹配                         *')
+    #print('-p: CMD窗口打印匹配                         *')
     print('-a: 选择所有的工作表                        *')
     print('-l: 选择抓取抓取匹配细节                    *')
     print('-from_reg:类似notepad的搜索列表，更好看     *')
@@ -211,16 +211,16 @@ if 'w' in params or 'W' in params:
     root.mainloop()
 
 # 7.对于#4.2.5的匹配结果应该输出到CMD窗口，让运行者第一时间直到整个匹配的结果。
-if 'p' in params or 'P' in params:
-    for table, result in output.items():
-        print(f'工作表：{table}')
-        for rule, info in result.items():
-            if rule != '判定' and rule != '失败规则':
-                print(f'规则：{rule}，次数：{info["次数"]}，结果：{info["结果"]}')
-                #print('匹配项目：')
-                #for line in info['匹配项目']:
-                #    print(line)
-                print()
-        print(f'判定：{result["判定"]}')
-        print(f'失败规则：{result["失败规则"]}')
-        print()
+# if 'p' in params or 'P' in params:
+    # for table, result in output.items():
+        # print(f'工作表：{table}')
+        # for rule, info in result.items():
+            # if rule != '判定' and rule != '失败规则':
+                # #print(f'规则：{rule}，次数：{info["次数"]}，结果：{info["结果"]}')
+                # #print('匹配项目：')
+                # #for line in info['匹配项目']:
+                # #    print(line)
+                # print()
+        # print(f'判定：{result["判定"]}')
+        # print(f'失败规则：{result["失败规则"]}')
+        # print()
